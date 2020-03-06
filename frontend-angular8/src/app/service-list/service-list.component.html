@@ -1,0 +1,38 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Task List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>servicename</th>
+            <th>clientname</th>
+            <th>clientsurname</th>
+            <th>address</th>
+            <th>city</th>
+            <th>telephone</th>
+            <th>status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let service of services | async">
+            <td>{{service.servicename}}</td>
+            <td>{{service.clientname}}</td>
+            <td>{{service.clientsurname}}</td>
+            <td>{{service.address}}</td>
+            <td>{{service.city}}</td>
+            <td>{{service.telephone}}</td>
+            <td>{{service.status}}</td>
+            <td>
+               <button (click)="serviceDetails(service.id)" class="btn btn-warning" style="margin-left: 10px">Details</button>
+                <button (click)="updateService(service.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="deleteService(service.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+                <!-- <button (click)="ShowOnMap(service.id)" class="btn btn-secondary" style="margin-left: 10px">Show on map</button> -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

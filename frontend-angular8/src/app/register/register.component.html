@@ -1,0 +1,40 @@
+<!-- <app-menu></app-menu> -->
+<div class="container col-lg-8">
+    <h1 class="text-center">Register</h1>
+    <div class="card">
+      <div class="card-body">
+        <form class="form-group">
+          <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+          <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+          <div class="form-group">
+            <label for="pwd">Name:</label>
+            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter your Name"
+              name="password">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Surname:</label>
+            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter your Surname"
+              name="password">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Email:</label>
+            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter your Email"
+              name="password">
+          </div>
+          <div class="form-group">
+            <label for="email">User Name :</label>
+            <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter User Name"
+              name="username">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
+              name="password">
+          </div>
+          <button class="btn btn-success" block="true" style="margin-left: 10px">Register</button>
+          <button (click)=gotoLogin() class="btn btn-danger" block="true" style="margin-left: 10px">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,54 @@
+<h3>Create Task</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">servicename</label>
+      <input type="text" class="form-control" id="servicename" required [(ngModel)]="service.servicename" name="servicename">
+    </div>
+
+    <div class="form-group">
+      <label for="name">clientname</label>
+      <input type="text" class="form-control" id="clientname" required [(ngModel)]="service.clientname" name="clientname">
+    </div>
+
+    <div class="form-group">
+        <label for="name">clientsurname</label>
+        <input type="text" class="form-control" id="clientsurname" required [(ngModel)]="service.clientsurname" name="clientsurname">
+    </div>
+
+    <div class="form-group">
+      <label for="name">address</label>
+      <input type="text" class="form-control" id="address" required [(ngModel)]="service.address" name="address">
+    </div>
+
+    <div class="form-group">
+      <label for="name">city</label>
+      <input type="text" class="form-control" id="city" required [(ngModel)]="service.city" name="city">
+    </div>
+
+    <div class="form-group">
+        <label for="name">telephone</label>
+        <input type="text" class="form-control" id="telephone" required [(ngModel)]="service.telephone" name="telephone">
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="name">status</label>
+      <input type="text" class="form-control" id="status" required [(ngModel)]="service.status" name="status">
+    </div> -->
+    <div class="form-group">
+      <label for="name">status</label>
+      <select class="form-control" id="status"  required [(ngModel)]="service.status" name="status">
+      <option value="In progress">In progress</option>
+      <option value="Completed">Completed</option>
+      </select>
+      <!-- <input type="text" class="form-control" id="status" required [(ngModel)]="service.status" name="status"> -->
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newService()">Add</button> -->
+</div>

@@ -1,0 +1,60 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Product List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>description</th>
+          <th>price</th>
+          <th>expiration</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products | async">
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.expiration}}</td>
+
+          <td>
+              <button (click)="productDetails(product.id)" class="btn btn-warning" style="margin-left: 10px">Details</button>
+              <button (click)="updateProduct(product.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="deleteProduct(product.id)" class="btn btn-danger"style="margin-left: 10px">Delete</button>
+              <!-- <button (click)="ProductToCart(product.id)" class="btn btn-success" style="margin-left: 10px">Add to cart</button> -->
+              <!-- <button (click)="payu()" class="btn btn-success" style="margin-left: 10px">Payu</button> -->
+              <!-- <button  class="nav-item nav-link-edit" [routerLink]="['payment']" style="margin-left: 10px">Payu2</button> -->
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- <div style="width:360px; margin:0 auto;">
+  <div class="center card text-white bg-danger mb-3" style="max-width: 18rem;">
+    <div class="card-header text-center">Shopping Cart</div>
+    <div class="card-body">
+        <h5 class="card-title">Total: ${{total}}</h5>
+        <hr>
+        <h6 class="card-title">Items bought:</h6>
+  
+        <ul>
+            <li *ngFor="let order of orders.productOrders">
+                {{ order.product.name }} - {{ order.quantity}} pcs.
+            </li>
+        </ul>
+
+        <button (click)="payu()" class="btn btn-success btn-block" >Checkout</button>
+  
+        <button class="btn btn-light btn-block" (click)="payu(product.id)"
+             [disabled]="orders.productOrders.length == 0">
+             Checkout
+        </button>
+    </div>
+  </div>
+</div> -->
+</div>

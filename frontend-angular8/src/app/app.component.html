@@ -1,0 +1,48 @@
+<app-menu></app-menu>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <!-- <li class="nav-item">
+        <a routerLink="employees" class="nav-link" routerLinkActive="active" *ngIf="isLoggedIn$ | async" >Employee list</a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="add" class="nav-link" routerLinkActive="active" *ngIf="isLoggedIn$ | async" >Add employee</a>
+    </li> -->
+    <li class="nav-item">
+        <a routerLink="products" class="nav-link" routerLinkActive="active" *ngIf="isLoggedIn$ | async" >Product list</a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="P-add" class="nav-link" routerLinkActive="active" *ngIf="isLoggedIn$ | async" >Add product</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="users" class="nav-link" routerLinkActive="active" *ngIf="isLoggedIn$ | async" >Users list</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="U-add" class="nav-link" routerLinkActive="active" *ngIf="isLoggedIn$ | async" >Add user</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="services" class="nav-link" routerLinkActive="active" *ngIf="isLoggedIn$ | async" >Services list</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="Service-add" class="nav-link" routerLinkActive="active" *ngIf="isLoggedIn$ | async" >Add service</a>
+</li>
+  </ul>
+</nav>
+
+
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>  
+  <div class="card">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<!-- <footer class="footer bg-secondary">
+  <div class="container" >
+      <span>Projekt AI 2019 BU</span>
+  </div>
+</footer> -->

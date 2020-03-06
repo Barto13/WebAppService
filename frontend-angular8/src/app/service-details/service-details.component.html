@@ -1,0 +1,30 @@
+<h2>Task Details</h2> 
+
+<hr/>
+<div *ngIf="service">
+  <div>
+    <label><b>servicename: </b></label> {{service.servicename}}
+  </div>
+  <div>
+    <label><b>clientname: </b></label> {{service.clientname}}
+  </div>
+  <div>
+    <label><b>clientsurname: </b></label> {{service.clientsurname}}
+  </div>
+  <div>
+    <label><b>address: </b></label> {{service.address}}
+  </div>
+  <div>
+    <label><b>city: </b></label> {{service.city}}
+  </div>
+  <div>
+    <label><b>telephone: </b></label> {{service.telephone}}
+  </div>
+  <div>
+    <label><b>status: </b></label> {{service.status}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Service List</button><br>
